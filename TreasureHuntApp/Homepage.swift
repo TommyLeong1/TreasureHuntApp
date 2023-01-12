@@ -63,6 +63,18 @@ class Homepage: UIViewController {
         // Change background color of view
         self.view.backgroundColor = UIColor.white
         
+        let button:UIButton = UIButton(frame: CGRect(x: 120, y: 550, width: 150, height: 80))
+        button.backgroundColor = .systemYellow
+        button.setTitle("Mission content", for: .normal)
+        button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
+        self.view.addSubview(button)
+    }
+    
+    @objc func buttonClicked() {
+        let alert = UIAlertController(title: "Mission content", message: "You need to find all the treasures in the three maps", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
