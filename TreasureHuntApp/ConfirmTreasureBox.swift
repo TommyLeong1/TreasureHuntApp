@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  TreasureHuntApp
+//  homepage.swift
+//  TreasurehuntApp
 //
 //  Created by Tommy on 1/11/23.
 //
@@ -8,7 +8,7 @@
 import UIKit
 import GoogleMaps
 
-class MapView: UIViewController,CLLocationManagerDelegate {
+class ConfirmTreasureBox: UIViewController,CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     var Zoom : Float = 15.0
@@ -53,8 +53,8 @@ class MapView: UIViewController,CLLocationManagerDelegate {
         // creates a treasure in the map.
         let treasure = GMSMarker()
         treasure.position = CLLocationCoordinate2D(latitude: 22.4216, longitude: 114.2323)
-        treasure.title = "You find the treasure!"
-        treasure.snippet = "Please click Confirm Treasure Box to open the treasure!"
+        treasure.title = "Congratulations!"
+        treasure.snippet = "You find the treasure!"
         treasure.map = mapView
         treasure.icon = UIImage(named: "Treasurebox")
         

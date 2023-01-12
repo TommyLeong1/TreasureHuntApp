@@ -23,17 +23,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          //set the first page
          let firstVC = Homepage()
          let firstTabNavVC = UINavigationController(rootViewController: firstVC)
-        firstTabNavVC.tabBarItem = UITabBarItem(title: "Map", image:
+        firstTabNavVC.tabBarItem = UITabBarItem(title: "Home Page", image:
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
         
          //set the second page
          let secondVC = MapView()
-         secondVC.tabBarItem = UITabBarItem(title: "Item2", image:
+         secondVC.tabBarItem = UITabBarItem(title: "Map", image:
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
         
          //set the third page
-         let thirdVC = TreasureLocation1()
-         thirdVC.tabBarItem = UITabBarItem(title: "Item3", image:
+         let thirdVC = ConfirmTreasureBox()
+         thirdVC.tabBarItem = UITabBarItem(title: "Confirm Treasure Box", image:
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
         
          //build the tab view
