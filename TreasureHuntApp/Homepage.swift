@@ -1,8 +1,8 @@
 //
-//  homepage.swift
-//  TreasurehuntApp
+//  TreasureLocationNavigation.swift
+//  TreasureHuntApp
 //
-//  Created by Tommy on 1/11/23.
+//  Created by Tommy on 1/12/23.
 //
 
 import UIKit
@@ -60,21 +60,19 @@ class Homepage: UIViewController {
         // Add Treasurebox View to view
         self.view.addSubview(self.TreasureboxView)
         
-        // Change background color of view
+        // Change background color of view to white
         self.view.backgroundColor = UIColor.white
+                                
+        // set the button that jump to TreasureLocation1 page
+        let Treasure1 = UIButton(frame: CGRect(x: 0, y: 500, width: 400, height: 50))
+            Treasure1.setTitle("Treasure Location 1", for: .normal)
+            Treasure1.backgroundColor = UIColor.systemYellow
+            Treasure1.addTarget(self, action: #selector(Homepage.Treasure1page), for: .touchUpInside)
+            self.view.addSubview(Treasure1)
+        }
         
-        let button:UIButton = UIButton(frame: CGRect(x: 120, y: 550, width: 150, height: 80))
-        button.backgroundColor = .systemYellow
-        button.setTitle("Mission content", for: .normal)
-        button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
-        self.view.addSubview(button)
-    }
-    
-    @objc func buttonClicked() {
-        let alert = UIAlertController(title: "Mission content", message: "You need to find all the treasures in the maps", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
+        // button function that push view to TreasureLocation1
+        @objc func Treasure1page() {
+            self.navigationController!.pushViewController(TreasureLocation1(), animated: true)
+        }
 }
