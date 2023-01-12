@@ -10,13 +10,51 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+               
+         guard let windowScene = (scene as? UIWindowScene) else { return }
+         window = UIWindow(frame: UIScreen.main.bounds)
+                         
+         //create a tab controller
+         let tabController = UITabBarController()
+         
+         //set the first page
+         let firstVC = Homepage()
+         let firstTabNavVC = UINavigationController(rootViewController: firstVC)
+        firstTabNavVC.tabBarItem = UITabBarItem(title: "Map", image:
+            UIImage(systemName: "s.square.fill"), selectedImage: nil)
+        
+         //set the second page
+         let secondVC = ViewController()
+         secondVC.tabBarItem = UITabBarItem(title: "Item2", image:
+            UIImage(systemName: "s.square.fill"), selectedImage: nil)
+        
+         //set the third page
+         let thirdVC = MapView2()
+         thirdVC.tabBarItem = UITabBarItem(title: "Item3", image:
+            UIImage(systemName: "s.square.fill"), selectedImage: nil)
+        
+        //set the fourth page
+        let fourthVC = MapView3()
+        fourthVC.tabBarItem = UITabBarItem(title: "Item3", image:
+           UIImage(systemName: "s.square.fill"), selectedImage: nil)
+                
+        
+         //build the tab view
+         tabController.viewControllers = [
+             firstTabNavVC,
+             secondVC,
+             thirdVC,
+             fourthVC
+         ]
+        
+        
+        
+         window?.rootViewController = tabController
+         window?.makeKeyAndVisible()
+         window?.windowScene = windowScene
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
