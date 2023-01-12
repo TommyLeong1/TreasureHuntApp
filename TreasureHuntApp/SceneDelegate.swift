@@ -50,7 +50,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              fourthVC
          ]
         
-        
+        // set the tab view color
+        tabController.tabBar.backgroundColor = UIColor.white
         
          window?.rootViewController = tabController
          window?.makeKeyAndVisible()
