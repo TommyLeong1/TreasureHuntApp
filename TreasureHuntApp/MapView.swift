@@ -53,24 +53,24 @@ class MapView: UIViewController,CLLocationManagerDelegate {
         // creates treasure1 in the map.
         let treasure1 = GMSMarker()
         treasure1.position = CLLocationCoordinate2D(latitude: 22.4216, longitude: 114.2323)
-        treasure1.title = "You find the treasure!"
-        treasure1.snippet = "Please click Confirm Treasure Box to open the treasure!"
+        treasure1.title = "You find the treasure1!"
+        treasure1.snippet = "Please click Confirm Treasure Box to open the treasure1!"
         treasure1.map = mapView
         treasure1.icon = UIImage(named: "Treasurebox")
         
         // creates treasure2 in the map.
         let treasure2 = GMSMarker()
         treasure2.position = CLLocationCoordinate2D(latitude: 22.408425, longitude: 114.222716)
-        treasure2.title = "You find the treasure!"
-        treasure2.snippet = "Please click Confirm Treasure Box to open the treasure!"
+        treasure2.title = "You find the treasure2!"
+        treasure2.snippet = "Please click Confirm Treasure Box to open the treasure2!"
         treasure2.map = mapView
         treasure2.icon = UIImage(named: "Treasurebox")
         
         // creates treasure3 in the map.
         let treasure3 = GMSMarker()
         treasure3.position = CLLocationCoordinate2D(latitude: 22.387694, longitude: 114.208349)
-        treasure3.title = "You find the treasure!"
-        treasure3.snippet = "Please click Confirm Treasure Box to open the treasure!"
+        treasure3.title = "You find the treasure3!"
+        treasure3.snippet = "Please click Confirm Treasure Box to open the treasure3!"
         treasure3.map = mapView
         treasure3.icon = UIImage(named: "Treasurebox")
     }

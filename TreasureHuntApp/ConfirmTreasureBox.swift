@@ -69,7 +69,7 @@ class ConfirmTreasureBox: UIViewController,CLLocationManagerDelegate {
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
         }))
         
-        // alert if user find the treasure
+        // alert if user find the treasure1
         if (center.latitude == treasure.position.latitude && center.longitude == treasure.position.longitude){
             self.present(alert, animated: true, completion: nil)
             treasure.icon = UIImage(named: "openbox")
