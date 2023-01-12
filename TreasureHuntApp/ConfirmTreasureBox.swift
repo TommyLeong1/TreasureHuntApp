@@ -13,8 +13,8 @@ class ConfirmTreasureBox: UIViewController,CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var Zoom : Float = 15.0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_: Bool) {
+        super.viewWillAppear(true)
         
         // aks permission for user location
         locationManager.delegate = self
@@ -56,6 +56,14 @@ class ConfirmTreasureBox: UIViewController,CLLocationManagerDelegate {
         treasure2.map = mapView
         treasure2.icon = UIImage(named: "Treasurebox")
         
+        // creates treasure3 in the map.
+        let treasure3 = GMSMarker()
+        treasure3.position = CLLocationCoordinate2D(latitude: 22.387694, longitude: 114.208349)
+        treasure3.title = "Congratulations!"
+        treasure3.snippet = "You find the treasure!"
+        treasure3.map = mapView
+        treasure3.icon = UIImage(named: "Treasurebox")
+        
         // set a alert to remind user find the treasure
         let alert = UIAlertController(title: "Congratulations!", message: "You find the treasure!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
@@ -72,5 +80,12 @@ class ConfirmTreasureBox: UIViewController,CLLocationManagerDelegate {
             self.present(alert, animated: true, completion: nil)
             treasure2.icon = UIImage(named: "openbox")
         }
+        
+        // alert if user find the treasure3
+        if (center.latitude == treasure3.position.latitude && center.longitude == treasure3.position.longitude){
+            self.present(alert, animated: true, completion: nil)
+            treasure3.icon = UIImage(named: "openbox")
+        }
+        
     }
 }
