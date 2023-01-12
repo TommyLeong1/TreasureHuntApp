@@ -66,21 +66,12 @@ class MapView: UIViewController,CLLocationManagerDelegate {
         treasure2.map = mapView
         treasure2.icon = UIImage(named: "Treasurebox")
         
-        // set a alert to remind user find the treasure
-        let alert = UIAlertController(title: "Congratulations!", message: "You find the treasure!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-        }))
-        
-        // alert if user find the treasure1
-        if (center.latitude == treasure1.position.latitude && center.longitude == treasure1.position.longitude){
-            self.present(alert, animated: true, completion: nil)
-            treasure1.icon = UIImage(named: "openbox")
-        }
-        
-        // alert if user find the treasure2
-        if (center.latitude == treasure2.position.latitude && center.longitude == treasure2.position.longitude){
-            self.present(alert, animated: true, completion: nil)
-            treasure2.icon = UIImage(named: "openbox")
-        }
+        // creates treasure3 in the map.
+        let treasure3 = GMSMarker()
+        treasure3.position = CLLocationCoordinate2D(latitude: 22.387694, longitude: 114.208349)
+        treasure3.title = "You find the treasure!"
+        treasure3.snippet = "Please click Confirm Treasure Box to open the treasure!"
+        treasure3.map = mapView
+        treasure3.icon = UIImage(named: "Treasurebox")
     }
 }
