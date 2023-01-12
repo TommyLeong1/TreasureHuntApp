@@ -36,17 +36,7 @@ class ConfirmTreasureBox: UIViewController,CLLocationManagerDelegate {
                                               longitude: userLocation!.coordinate.longitude, zoom: Zoom)
         let mapView = GMSMapView.map(withFrame: CGRectZero, camera: camera)
         mapView.isMyLocationEnabled = true
-        self.view = mapView
-        
-        // a marker to show user's current location
-        let mylocationmarker = GMSMarker()
-        mylocationmarker.position = center
-        mylocationmarker.title = "Here is your current location"
-        mylocationmarker.snippet = "Try to find treasure in the map!"
-        mylocationmarker.map = mapView
-        
-        // current location button
-        mapView.settings.myLocationButton = true
+        self.view = mapView        
         
         locationManager.stopUpdatingLocation()
         
