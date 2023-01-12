@@ -8,7 +8,7 @@
 import UIKit
 import GoogleMaps
 
-class TreasurePlace: UIViewController {
+class TreasureLocation1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         

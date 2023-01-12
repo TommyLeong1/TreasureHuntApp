@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
         
          //set the third page
-         let thirdVC = TreasurePlace()
+         let thirdVC = TreasureLocation1()
          thirdVC.tabBarItem = UITabBarItem(title: "Item3", image:
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
         
