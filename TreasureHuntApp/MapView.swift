@@ -11,20 +11,18 @@ import GoogleMaps
 class MapView: UIViewController,CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
+    
+    // set the current zoom to 15.0
     var Zoom : Float = 15.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // aks permission for user location
+        // ask permission for user location
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-    }
-    
-    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("Error" + error.description)
     }
     
     // get user location
@@ -32,6 +30,7 @@ class MapView: UIViewController,CLLocationManagerDelegate {
         let userLocation = locations.last
         let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         
+        // set the camera with user location
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
                                               longitude: userLocation!.coordinate.longitude, zoom: Zoom)
         let mapView = GMSMapView.map(withFrame: CGRectZero, camera: camera)

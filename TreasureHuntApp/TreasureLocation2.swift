@@ -12,6 +12,7 @@ class TreasureLocation2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set the camera with treasurelocation 2 location
         let camera = GMSCameraPosition.camera(withLatitude: 22.408425, longitude: 114.222716, zoom: 15.0)
         let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         self.view.addSubview(mapView)
