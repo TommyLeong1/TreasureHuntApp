@@ -50,23 +50,37 @@ class MapView: UIViewController,CLLocationManagerDelegate {
         
         locationManager.stopUpdatingLocation()
         
-        // creates a treasure in the map.
-        let treasure = GMSMarker()
-        treasure.position = CLLocationCoordinate2D(latitude: 22.4216, longitude: 114.2323)
-        treasure.title = "You find the treasure!"
-        treasure.snippet = "Please click Confirm Treasure Box to open the treasure!"
-        treasure.map = mapView
-        treasure.icon = UIImage(named: "Treasurebox")
+        // creates treasure1 in the map.
+        let treasure1 = GMSMarker()
+        treasure1.position = CLLocationCoordinate2D(latitude: 22.4216, longitude: 114.2323)
+        treasure1.title = "You find the treasure!"
+        treasure1.snippet = "Please click Confirm Treasure Box to open the treasure!"
+        treasure1.map = mapView
+        treasure1.icon = UIImage(named: "Treasurebox")
+        
+        // creates treasure2 in the map.
+        let treasure2 = GMSMarker()
+        treasure2.position = CLLocationCoordinate2D(latitude: 22.408425, longitude: 114.222716)
+        treasure2.title = "You find the treasure!"
+        treasure2.snippet = "Please click Confirm Treasure Box to open the treasure!"
+        treasure2.map = mapView
+        treasure2.icon = UIImage(named: "Treasurebox")
         
         // set a alert to remind user find the treasure
         let alert = UIAlertController(title: "Congratulations!", message: "You find the treasure!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
         }))
         
-        // alert if user find the treasure
-        if (center.latitude == treasure.position.latitude && center.longitude == treasure.position.longitude){
+        // alert if user find the treasure1
+        if (center.latitude == treasure1.position.latitude && center.longitude == treasure1.position.longitude){
             self.present(alert, animated: true, completion: nil)
-            treasure.icon = UIImage(named: "openbox")
+            treasure1.icon = UIImage(named: "openbox")
+        }
+        
+        // alert if user find the treasure2
+        if (center.latitude == treasure2.position.latitude && center.longitude == treasure2.position.longitude){
+            self.present(alert, animated: true, completion: nil)
+            treasure2.icon = UIImage(named: "openbox")
         }
     }
 }
