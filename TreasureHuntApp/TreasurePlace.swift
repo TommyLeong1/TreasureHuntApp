@@ -20,8 +20,8 @@ class TreasurePlace: UIViewController {
         // show the treasurePlace in the map.
         let treasure = GMSMarker()
         treasure.position = CLLocationCoordinate2D(latitude: 22.4216, longitude: 114.2323)
-        treasure.title = "Congratulations!"
-        treasure.snippet = "You find the treasure!"
+        treasure.title = "Hints"
+        treasure.snippet = "The treasure is nearby Yiu On Estate!"
         treasure.map = mapView
         treasure.icon = UIImage(named: "Treasurebox")
     }

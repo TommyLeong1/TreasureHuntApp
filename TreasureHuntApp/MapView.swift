@@ -70,5 +70,15 @@ class MapView: UIViewController,CLLocationManagerDelegate {
         item2.snippet = "Hints: focus on left side"
         item2.map = mapView
         
+        // set a alert to remind user find the treasure
+        let alert = UIAlertController(title: "Congratulations!", message: "You find the treasure!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        }))
+        
+        // alert if user find the treasure
+        if (center.latitude == treasure.position.latitude && center.longitude == treasure.position.longitude){
+            self.present(alert, animated: true, completion: nil)
+            
+        }
     }
 }
