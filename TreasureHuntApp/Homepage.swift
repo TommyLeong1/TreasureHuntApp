@@ -69,10 +69,22 @@ class Homepage: UIViewController {
             Treasure1.backgroundColor = UIColor.systemYellow
             Treasure1.addTarget(self, action: #selector(Homepage.Treasure1page), for: .touchUpInside)
             self.view.addSubview(Treasure1)
-        }
         
-        // button function that push view to TreasureLocation1
-        @objc func Treasure1page() {
-            self.navigationController!.pushViewController(TreasureLocation2(), animated: true)
-        }
+        // set the button that jump to TreasureLocation2 page
+        let Treasure2 = UIButton(frame: CGRect(x: 0, y: 600, width: 400, height: 50))
+            Treasure2.setTitle("Treasure Location 2", for: .normal)
+            Treasure2.backgroundColor = UIColor.systemYellow
+            Treasure2.addTarget(self, action: #selector(Homepage.Treasure2page), for: .touchUpInside)
+        self.view.addSubview(Treasure2)
+    }
+        
+    // button function that push view to TreasureLocation1
+    @objc func Treasure1page() {
+        self.navigationController!.pushViewController(TreasureLocation1(), animated: true)
+    }
+    
+    // button function that push view to TreasureLocation1
+    @objc func Treasure2page() {
+        self.navigationController!.pushViewController(TreasureLocation2(), animated: true)
+    }
 }
