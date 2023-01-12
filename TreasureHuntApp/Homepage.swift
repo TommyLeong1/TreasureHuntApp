@@ -80,7 +80,7 @@ class Homepage: UIViewController {
         
     // button function that push view to TreasureLocation1
     @objc func Treasure1page() {
-        self.navigationController!.pushViewController(TreasureLocation1(), animated: true)
+        self.navigationController!.pushViewController(TreasureLocation3(), animated: true)
     }
     
     // button function that push view to TreasureLocation1
