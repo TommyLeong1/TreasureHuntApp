@@ -24,5 +24,15 @@ class TreasureLocation1: UIViewController {
         treasure.snippet = "The treasure is nearby Yiu On Estate!"
         treasure.map = mapView
         treasure.icon = UIImage(named: "Treasurebox")
+        
+        // Show the Hints in the map
+        let labelMarker = GMSMarker()
+        labelMarker.position = CLLocationCoordinate2D(latitude: 22.4205, longitude: 114.2323)
+        let label = UILabel()
+        label.text = "Hints: The treasure is nearby Yiu On Estate"
+        label.sizeToFit()
+        label.textColor = UIColor.red
+        labelMarker.iconView = label
+        labelMarker.map = mapView
     }
 }

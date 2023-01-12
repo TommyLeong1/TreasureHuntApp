@@ -58,18 +58,6 @@ class ConfirmTreasureBox: UIViewController,CLLocationManagerDelegate {
         treasure.map = mapView
         treasure.icon = UIImage(named: "Treasurebox")
         
-        let item = GMSMarker()
-        item.position = CLLocationCoordinate2D(latitude: 22.41111, longitude: 114.2635)
-        item.title = "This is not the treasure!"
-        item.snippet = "Hints: focus on left side"
-        item.map = mapView
-        
-        let item2 = GMSMarker()
-        item2.position = CLLocationCoordinate2D(latitude: 22.41111, longitude: 114.2550)
-        item2.title = "This is not the treasure!"
-        item2.snippet = "Hints: focus on left side"
-        item2.map = mapView
-        
         // set a alert to remind user find the treasure
         let alert = UIAlertController(title: "Congratulations!", message: "You find the treasure!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
