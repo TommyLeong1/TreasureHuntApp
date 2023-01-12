@@ -78,7 +78,7 @@ class MapView: UIViewController,CLLocationManagerDelegate {
         // alert if user find the treasure
         if (center.latitude == treasure.position.latitude && center.longitude == treasure.position.longitude){
             self.present(alert, animated: true, completion: nil)
-            
+            treasure.icon = UIImage(named: "openbox")
         }
     }
 }
