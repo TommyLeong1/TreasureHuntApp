@@ -27,27 +27,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
         
          //set the second page
-         let secondVC = ViewController()
+         let secondVC = MapView()
          secondVC.tabBarItem = UITabBarItem(title: "Item2", image:
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
         
          //set the third page
-         let thirdVC = MapView2()
+         let thirdVC = TreasurePlace()
          thirdVC.tabBarItem = UITabBarItem(title: "Item3", image:
             UIImage(systemName: "s.square.fill"), selectedImage: nil)
-        
-        //set the fourth page
-        let fourthVC = MapView3()
-        fourthVC.tabBarItem = UITabBarItem(title: "Item3", image:
-           UIImage(systemName: "s.square.fill"), selectedImage: nil)
-                
         
          //build the tab view
          tabController.viewControllers = [
              firstTabNavVC,
              secondVC,
-             thirdVC,
-             fourthVC
+             thirdVC
          ]
         
         // set the tab view color

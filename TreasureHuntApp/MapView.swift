@@ -8,10 +8,10 @@
 import UIKit
 import GoogleMaps
 
-class ViewController: UIViewController,CLLocationManagerDelegate {
+class MapView: UIViewController,CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
-    var currentZoom : Float = 15.0
+    var Zoom : Float = 15.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
-                                              longitude: userLocation!.coordinate.longitude, zoom: currentZoom)
+                                              longitude: userLocation!.coordinate.longitude, zoom: Zoom)
         let mapView = GMSMapView.map(withFrame: CGRectZero, camera: camera)
         mapView.isMyLocationEnabled = true
         self.view = mapView
@@ -52,7 +52,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         // creates a treasure in the map.
         let treasure = GMSMarker()
-        treasure.position = CLLocationCoordinate2D(latitude: 22.42250, longitude: 114.2525)
+        treasure.position = CLLocationCoordinate2D(latitude: 22.4216, longitude: 114.2323)
         treasure.title = "Congratulations!"
         treasure.snippet = "You find the treasure!"
         treasure.map = mapView
@@ -69,16 +69,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         item2.title = "This is not the treasure!"
         item2.snippet = "Hints: focus on left side"
         item2.map = mapView
-        
-        // Show the mission in the map
-        let labelMarker = GMSMarker()
-        labelMarker.position = CLLocationCoordinate2D(latitude: 22.40805, longitude: 114.2625)
-        let label = UILabel()
-        label.text = "Try to find the treasure in the map"
-        label.sizeToFit()
-        label.textColor = UIColor.red
-        labelMarker.iconView = label
-        labelMarker.map = mapView
         
     }
 }

@@ -71,7 +71,7 @@ class Homepage: UIViewController {
     }
     
     @objc func buttonClicked() {
-        let alert = UIAlertController(title: "Mission content", message: "You need to find all the treasures in the three maps", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Mission content", message: "You need to find all the treasures in the maps", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
         }))
         self.present(alert, animated: true, completion: nil)
