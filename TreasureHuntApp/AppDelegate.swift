@@ -8,11 +8,11 @@
 import UIKit
 import GoogleMaps
 
-//setting google api key
-let googleApiKey = "AIzaSyBmuv-_QM0m8wKNKpZOS6q_-2bcomI44c0"
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+  //setting google api key
+  let googleApiKey = "AIzaSyBmuv-_QM0m8wKNKpZOS6q_-2bcomI44c0"
   
   var window: UIWindow?
   

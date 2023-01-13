@@ -18,7 +18,7 @@
 		65D632252970382200B5701D /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D632242970382200B5701D /* Homepage.swift */; };
 		65D6322729704D7B00B5701D /* TreasureLocation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6322629704D7B00B5701D /* TreasureLocation2.swift */; };
 		65D63229297056E200B5701D /* TreasureLocation3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D63228297056E200B5701D /* TreasureLocation3.swift */; };
-		65D6323129706B3900B5701D /* TreasureHuntAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6323029706B3900B5701D /* TreasureHuntAppTests.swift */; };
+		65D6323129706B3900B5701D /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6323029706B3900B5701D /* AppDelegateTests.swift */; };
 		9D7E6A43B96D0253A2E3B7DA /* Pods_TreasureHuntApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565ED701F17FBB58EE1B8FA9 /* Pods_TreasureHuntApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,7 @@
 		65D6322629704D7B00B5701D /* TreasureLocation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureLocation2.swift; sourceTree = "<group>"; };
 		65D63228297056E200B5701D /* TreasureLocation3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureLocation3.swift; sourceTree = "<group>"; };
 		65D6322E29706B3900B5701D /* TreasureHuntAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreasureHuntAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65D6323029706B3900B5701D /* TreasureHuntAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHuntAppTests.swift; sourceTree = "<group>"; };
+		65D6323029706B3900B5701D /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		C8823A65757812341A441DC3 /* Pods-TreasureHuntApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureHuntApp.release.xcconfig"; path = "Target Support Files/Pods-TreasureHuntApp/Pods-TreasureHuntApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +114,7 @@
 		65D6322F29706B3900B5701D /* TreasureHuntAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				65D6323029706B3900B5701D /* TreasureHuntAppTests.swift */,
+				65D6323029706B3900B5701D /* AppDelegateTests.swift */,
 			);
 			path = TreasureHuntAppTests;
 			sourceTree = "<group>";
@@ -296,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D6323129706B3900B5701D /* TreasureHuntAppTests.swift in Sources */,
+				65D6323129706B3900B5701D /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
