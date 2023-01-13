@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapView.swift
 //  TreasureHuntApp
 //
 //  Created by Tommy on 1/11/23.

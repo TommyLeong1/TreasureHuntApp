@@ -1,5 +1,5 @@
 //
-//  DistanceWithTreasure.swift
+//  TreasureLocation1.swift
 //  TreasureHuntApp
 //
 //  Created by Tommy on 1/12/23.
