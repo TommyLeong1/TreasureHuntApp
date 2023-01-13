@@ -14,6 +14,7 @@
 		6588DB12296FD3C2009F42A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6588DB11296FD3C2009F42A6 /* Assets.xcassets */; };
 		6588DB15296FD3C2009F42A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6588DB13296FD3C2009F42A6 /* LaunchScreen.storyboard */; };
 		6588DB21296FD81B009F42A6 /* ConfirmTreasureBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588DB20296FD81B009F42A6 /* ConfirmTreasureBox.swift */; };
+		65AE80012970F3FE008FBF93 /* HomepageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE80002970F3FE008FBF93 /* HomepageTests.swift */; };
 		65D632212970009700B5701D /* TreasureLocation1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D632202970009700B5701D /* TreasureLocation1.swift */; };
 		65D632252970382200B5701D /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D632242970382200B5701D /* Homepage.swift */; };
 		65D6322729704D7B00B5701D /* TreasureLocation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6322629704D7B00B5701D /* TreasureLocation2.swift */; };
@@ -44,6 +45,7 @@
 		6588DB14296FD3C2009F42A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6588DB16296FD3C2009F42A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6588DB20296FD81B009F42A6 /* ConfirmTreasureBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmTreasureBox.swift; sourceTree = "<group>"; };
+		65AE80002970F3FE008FBF93 /* HomepageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageTests.swift; sourceTree = "<group>"; };
 		65D632202970009700B5701D /* TreasureLocation1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureLocation1.swift; sourceTree = "<group>"; };
 		65D632242970382200B5701D /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 		65D6322629704D7B00B5701D /* TreasureLocation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureLocation2.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				65D6323029706B3900B5701D /* AppDelegateTests.swift */,
+				65AE80002970F3FE008FBF93 /* HomepageTests.swift */,
 			);
 			path = TreasureHuntAppTests;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D6323129706B3900B5701D /* AppDelegateTests.swift in Sources */,
+				65AE80012970F3FE008FBF93 /* HomepageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
